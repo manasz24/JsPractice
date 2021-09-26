@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript Event Challenges : 25 </title>
+    </head>
+    <body>
+        <h1>Javascript Event Challenges : 25</h1>
+        <div>
+            <p>Here is the first Paragraph of text 1</p>
+            <p>Here is the first Paragraph of text 2</p>
+            <p>Here is the first Paragraph of text 3</p>
+            <p>Here is the first Paragraph of text 4</p>
+        </div>
+        <button>Add a new color</button>
+        <script>
+            let btn = document.querySelector('button');
+            let pTag = document.querySelectorAll('p');
+
+            btn.addEventListener('click',function(){
+                for(let i=0;i<pTag.length;i++){
+                pTag[i].style.color="green";
+            }
+            });
+
+        </script>
+    </body>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript Event Challenges : 26 </title>
+    </head>
+    <body>
+        <h1>Javascript Event Challenges : 26</h1>
+        <div>
+            <p>Here is the first paragraph of text</p>
+        </div>
+        <button id='1'>add paragraph</button>
+        <button id='2'>remove paragraph</button>
+        <script>
+            "use Strict";
+
+            let btn=document.querySelectorAll('button');
+            btn[0].addEventListener('click', function(){
+                let pdiv=document.querySelector('div');
+                let newP = document.createElement('p');
+                let pText = document.createTextNode('A new Paragraph');
+                pdiv.appendChild(pText);
+                pdiv.appendChild(newP);
+
+            })
+
+            btn[1].addEventListener('click', function(){
+                let pdiv=document.querySelector('div');
+                let allP = document.querySelectorAll('p');
+                //let allt = document.querySelectorAll('')
+                //let pText = document.createTextNode('A new Paragraph');
+                //pdiv.appendChild(pText);
+                //pdiv.appendChild(newP);
+                pdiv.removeChild(pdiv.children[allP.length-1]);
+
+            })
+
+
+        </script>
+    </body>
+</html>
